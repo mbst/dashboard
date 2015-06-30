@@ -1,0 +1,12 @@
+<h1 class="title" data-bind="title"></h1>
+
+<h2 class="value" data-bind="value | shortenedNumber | prepend prefix | append suffix"></h2>
+
+<ul class="support-tickets">
+    <li class="support-ticket" data-foreach-item="issues">
+        <span class="summary" data-bind="item.summary" data-addclass-unclassified="item.classification | not"></span>
+        <span class="deadline" data-bind="item.deadline | deadlineFormat | raw"></span>
+    </li>
+</ul>
+
+<p class="updated-at" data-bind="updatedAtMessage"></p>

@@ -1,0 +1,16 @@
+<h1 class="title" data-bind="title"></h1>
+
+<table class="sensu-grid">
+    <tr>
+        <th>prod</th>
+        <td class="sensu-critical" data-bind="prod.critical">
+        <td class="sensu-warning" data-bind="prod.warning">
+    </tr>
+    <tr>
+        <th>stage</th>
+        <td class="sensu-critical" data-bind="stage.critical">
+        <td class="sensu-warning" data-bind="stage.warning">
+    </tr>
+</table>
+
+<p class="updated-at" data-bind="updatedAtMessage"></p>

@@ -1,0 +1,78 @@
+<% content_for :title do %>Dashboard – MetaBroadcast<% end %>
+<%
+  atlasColor = '#fc0088'
+  voilaColor = '#462e78'
+%>
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="3" data-sizey="1">
+      <div
+        data-image="/assets/logo.png"
+        data-view="Image"
+        style="background-color:#306"
+      ></div>
+    </li>
+    <li class="jira-list" data-row="2" data-col="1" data-sizex="3" data-sizey="5">
+      <div
+        data-id="jira-last-updated"
+        data-view="List"
+        data-unordered="please"
+        style="background-color:#306;"
+      ></div>
+    </li>
+    <li data-row="1" data-col="4" data-sizex="2" data-sizey="3">
+      <div
+        data-id="atlas-schedule"
+        data-view="Graph"
+        data-max="1000"
+        data-title="Atlas Schedule"
+        style="background-color:<%= atlasColor %>"
+      ></div>
+    </li>
+    <li data-row="4" data-col="4" data-sizex="2" data-sizey="3">
+      <div
+        data-id="atlas-content-single"
+        data-view="Graph"
+        data-max="1000"
+        data-title="Atlas Content (Single)"
+        style="background-color:<%= atlasColor %>"
+      ></div>
+    </li>
+    <li data-row="1" data-col="6" data-sizex="2" data-sizey="3">
+      <div
+        data-id="voila-schedule"
+        data-view="Graph"
+        data-max="1000"
+        data-title="Voila Schedule"
+        style="background-color:<%= voilaColor %>"
+      ></div>
+    </li>
+    <li data-row="4" data-col="6" data-sizex="2" data-sizey="3">
+      <div
+        data-id="voila-content-single"
+        data-view="Graph"
+        data-max="1000"
+        data-title="Voila Content (Single)"
+        style="background-color:<%= voilaColor %>"
+      ></div>
+    </li>
+    <li data-row="7" data-col="1" data-sizex="2" data-sizey="3">
+      <div data-id="lastfm" data-view="lastfm"></div>
+    </li>
+    <li data-row="7" data-col="3" data-sizex="1" data-sizey="3">
+      <div data-id="api-errors" data-view="ApiErrors" data-title="API Errors"></div>
+    </li>
+    <li data-row="7" data-col="4" data-sizex="1" data-sizey="3">
+      <div data-id="pagerduty" data-view="PagerDuty" data-title="Incidents"></div>
+    </li>    
+    <li data-row="7" data-col="5" data-sizex="1" data-sizey="3">
+      <div data-id="jira-support-issues" data-view="SupportTickets" data-title="Support"></div>
+    </li>
+    <li data-row="7" data-col="6" data-sizex="1" data-sizey="3">
+      <div data-id="jenkins-build-status" data-view="JenkinsHotness" data-title="Build Failures" data-cool="0" data-warm="1"></div>
+    </li>
+    <li data-row="7" data-col="7" data-sizex="1" data-sizey="3">
+      <div data-id="sensu" data-view="SensuGrid" data-title="Alerts"></div>
+    </li>
+  </ul>
+</div>
